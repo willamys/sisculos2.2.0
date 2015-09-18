@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns='http://maven.apache.org/POM/4.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd'>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.grails.plugins</groupId>
+  <artifactId>jasper-response</artifactId>
+  <packaging>zip</packaging>
+  <version>1.0.1</version>
+  <name>Jasper Response Plugin</name>
+  <description>Easy way to render JasperReports as PDF or HTML in Grails Projects.
+</description>
+  <url>http://code.google.com/p/grails-jasper-response-plugin/w/list</url>
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>José Yoshiriro</name>
+      <email>jyoshiriro@gmail.com</email>
+    </developer>
+    <developer>
+      <name>Jose Yoshiriro</name>
+      <email>jyoshiriro@gmail.com</email>
+    </developer>
+  </developers>
+  <issueManagement>
+    <system>Google Code</system>
+    <url>http://code.google.com/p/grails-jasper-response-plugin/issues/list</url>
+  </issueManagement>
+  <scm>
+    <url>https://grails-jasper-response-plugin.googlecode.com/svn/</url>
+  </scm>
+  <dependencies />
+</project>

@@ -1,0 +1,23 @@
+<plugin name='jasper-response' version='1.0.1' grailsVersion='2.0 &gt; *'>
+  <author>José Yoshiriro</author>
+  <authorEmail>jyoshiriro@gmail.com</authorEmail>
+  <title>Jasper Response Plugin</title>
+  <description>Easy way to render JasperReports as PDF or HTML in Grails Projects.
+</description>
+  <documentation>http://code.google.com/p/grails-jasper-response-plugin/w/list</documentation>
+  <type>JasperResponseGrailsPlugin</type>
+  <resources>
+    <resource>JasperFilters</resource>
+    <resource>grails.plugin.jyoshiriro.jasperResponse.renderers.Jasper</resource>
+    <resource>grails.plugin.jyoshiriro.jasperResponse.renderers.JasperWriter</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
