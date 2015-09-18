@@ -37,25 +37,6 @@ class CurriculoController {
 			render(template:'form_cep', model:[consultacep:list])
 		}
 	}
-
-	def lista(Integer max) {
-		Usuario  usuario_login = session.user
-		if(usuario_login != null){
-			if(usuario_login.permissao == 0 || usuario_login.permissao == 2){
-				params.max = Math.min(max ?: 10, 100)
-				[curriculoInstance: Curriculo.list(params), curriculoInstanceCount: Curriculo.count()]
-			}else if(usuario_login.permissao == 1 ){
-				//tras somente o curriculo do usuário logado
-				Curriculo teste = usuario_login ? Curriculo.findByUsuario(usuario_login) : []
-				if(teste != null){
-					[curriculoInstanceList: Curriculo.findAllWhere(usuario: teste.usuario), curriculoInstanceCount: Curriculo.count()]
-				}
-			}
-		}else{
-			flash.message = "Desculpe, precisa estar autenticado no sistema."
-			redirect(controller:'usuario',action:'login')
-		}
-	}
 	
 	def index(Integer max) {
 		def curriculoInstanceList
@@ -68,8 +49,8 @@ class CurriculoController {
 					curriculoInstanceList = Curriculo.list(params)
 					curriculoInstanceCount = Curriculo.count()
 				}else{
-					curriculoInstanceList = Curriculo.findAllByNomeLike('%'+params.query+'%')
-					curriculoInstanceCount = Curriculo.findAllByNomeLike('%'+params.query+'%').size()
+					curriculoInstanceList = Curriculo.findAllByNomeLikeOrFormacao('%'+params.query+'%','%'+params.query+'%')
+					curriculoInstanceCount = Curriculo.findAllByNomeLikeOrFormacao('%'+params.query+'%','%'+params.query+'%').size()
 				}
 				[curriculoInstanceList: curriculoInstanceList, curriculoInstanceCount: curriculoInstanceCount]
 			}else if(usuario_login.permissao == 1 ){
